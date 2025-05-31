@@ -1,0 +1,31 @@
+#pulseaudio,
+#cpu,
+#memory,
+#temperature,
+#clock,
+#workspaces {
+}
+
+* {
+    border: none;
+    padding: 0 6px;
+    font-family: sans-serif;
+    font-size: 13px;
+    color: #ffffff;
+    background: transparent;
+}
+
+window#waybar {
+    background-color: rgba(0, 0, 0, 0.6); /* semi-transparent black */
+    color: #ffffff;
+}
+
+#workspaces,
+#network,
+#pulseaudio,
+#cpu,
+#memory,
+#temperature,
+#clock {
+    margin: 0 6px;
+}
