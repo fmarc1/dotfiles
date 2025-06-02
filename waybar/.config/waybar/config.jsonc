@@ -4,14 +4,16 @@
   "modules-left": ["hyprland/workspaces"],
   "modules-right": [
     "pulseaudio",
-    "cpu",
-    "memory",
-    "temperature",
+    //"cpu",
+    //"memory",
+    //"temperature",
     "network",
     "battery",
     "clock",
+    "custom/power",
   ],
 
+  /*
   "hyprland/workspaces": {
     "disable-scroll": true,
     "format": "{name}: {icon}",
@@ -19,9 +21,10 @@
       "focused": "",
       "active": "",
       "default": "",
-      "urgent": "",
+      //"urgent": "",
     },
   },
+  */
 
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
@@ -40,7 +43,7 @@
       "car": "",
       "default": ["", "", ""],
     },
-    "on-click": "pavucontrol",
+    //"on-click": "pavucontrol",
   },
 
   "cpu": {
@@ -87,8 +90,16 @@
   },
 
   "clock": {
-    "format": "{:%a %b %d %H:%M}",
+    //"format": "{:%a %b %d %H:%M}",
+    "format": "{:%H:%M}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": "{:%Y-%m-%d}",
+    //"format-alt": "{:%Y-%m-%d}",
+    "format-alt": "{:%a %b %d %Y}",
+  },
+
+  "custom/power": {
+    "format": "⏻ ",
+    "tooltip": false,
+    "on-click": "~/.config/waybar/power_menu.sh",
   },
 }
